@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Withings OAuth Redirect</title>
+  </head>
+  <body>
+    <h1>Withings OAuth Redirect</h1>
+    <p>This page captures your OAuth <code>code</code>.</p>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get("code");
+      const state = params.get("state");
+
+      document.write("<p><strong>Code:</strong> " + code + "</p>");
+      document.write("<p><strong>State:</strong> " + state + "</p>");
+    </script>
+  </body>
+</html>
